@@ -16,6 +16,7 @@ const App = () => {
 
       <input type="number" value={value} onChange={e => setValue(e.target.value as unknown as number)} />
       <div>great processing...</div>
+      <div>powerful processing...</div>
       <div>result: {text.repeat(value)}</div>
     </div>
   );
