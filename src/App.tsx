@@ -12,6 +12,7 @@ const App = () => {
     <div>
       {<Textbox text={text} onChange={handleChange} />}
 
+      <span>subsubsub</span>
       <div>result: {text}</div>
     </div>
   );
