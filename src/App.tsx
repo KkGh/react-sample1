@@ -15,7 +15,7 @@ const App = () => {
       {<Textbox text={text} onChange={handleChange} />}
 
       <input type="number" value={value} onChange={e => setValue(e.target.value as unknown as number)} />
-
+      <div>great processing...</div>
       <div>result: {text.repeat(value)}</div>
     </div>
   );
