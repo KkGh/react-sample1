@@ -3,6 +3,8 @@ import Textbox from "./components/Textbox";
 
 const App = () => {
   const [text, setText] = useState("sample");
+  const [value, setValue] = useState(10);
+
 
   const handleChange = useCallback((text: string) => {
     setText(text);
@@ -12,8 +14,9 @@ const App = () => {
     <div>
       {<Textbox text={text} onChange={handleChange} />}
 
-      <span>subsubsub</span>
-      <div>result: {text}</div>
+      <input type="number" value={value} onChange={e => setValue(e.target.value as unknown as number)} />
+
+      <div>result: {text.repeat(value)}</div>
     </div>
   );
 };
