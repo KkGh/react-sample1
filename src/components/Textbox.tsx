@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, useCallback } from "react";
 
 type Props = {
   text: string;
@@ -6,9 +6,12 @@ type Props = {
 };
 
 const Textbox = ({ text, onChange }: Props) => {
-  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    onChange(event.target.value);
-  };
+  const handleChange = useCallback(
+    (event: ChangeEvent<HTMLTextAreaElement>) => {
+      onChange(event.target.value);
+    },
+    [onChange]
+  );
 
   return <textarea value={text} onChange={handleChange} />;
 };
