@@ -22,7 +22,7 @@ const App = () => {
         <input type="number" value={value} onChange={handleValueChange} />
         times:
       </div>
-      <textarea readOnly rows={10} cols={40}>
+      <textarea readOnly rows={20} cols={40}>
         {text.repeat(value)}
       </textarea>
     </div>
