@@ -18,10 +18,10 @@ const App = () => {
       {<Textbox text={text} onChange={handleTextChange} />}
 
       <div>
+        repeated
         <input type="number" value={value} onChange={handleValueChange} />
+        times:
       </div>
-
-      <div>result: </div>
       <textarea readOnly rows={10} cols={40}>
         {text.repeat(value)}
       </textarea>
