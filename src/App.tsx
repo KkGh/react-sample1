@@ -21,7 +21,10 @@ const App = () => {
         <input type="number" value={value} onChange={handleValueChange} />
       </div>
 
-      <div>result: {text.repeat(value)}</div>
+      <div>result: </div>
+      <textarea readOnly rows={10} cols={40}>
+        {text.repeat(value)}
+      </textarea>
     </div>
   );
 };
